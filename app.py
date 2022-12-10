@@ -32,15 +32,15 @@ df_keluar = pd.read_csv(url_outflow)
 #membangun komponen
 header = html.H1("Aplikasi Simulasi Kapasitas Embung B ITERA", style={'textAlign': 'center', "height":"100 px", "background-color":"lightblue"})
 subtitle = html.H5("Tugas Besar Kapita Selekta Matematika Komputasi (KELOMPOK 3)", style={'textAlign': 'center', "height":"3 px", "background-color":"pink"})
-footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan | Christina Jheovani| Ayumi Rima| Alviolita Br.Barus | Yanti Marito| Holi Safira| Jesika Ginting"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"lightblue"})
+footer = html.Div([html.H1("Institut Teknologi Sumatera"),html.H5("Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365"), html.P("Zessica Nainggolan 119160072| Christina Jheovani 119160057| Ayumi Rima 119160069| Alviolita Br.Barus 119160002| Yanti Marito 119160075| Holi Safira 119160084| Jesika Ginting 119160006"), html.P("created @ 2022 by|072|")], style={'textAlign': 'center', "height":"3 px", "background-color":"lightblue"})
 
 chart_masuk= go.FigureWidget()
-chart_masuk.add_bar(name="Chart Inflow", x=df_masuk['Bulan'], y=df_masuk['Data-masuk'] )
-chart_masuk.layout.title = 'Chart Inflow Embung B'
+chart_masuk.add_scatter(name="Chart Inflow", x=df_masuk['Bulan'], y=df_masuk['Data-masuk'] )
+chart_masuk.layout.title = ' Inflow Embung B'
 
 chart_keluar = go.FigureWidget()
 chart_keluar.add_scatter(name="Outflow " , x=df_keluar['Bulan'], y=df_keluar['Data-keluar'])
-chart_keluar.layout.title = 'Chart Outflow Embung B'
+chart_keluar.layout.title = ' Outflow Embung B'
 
 simulation_fig = go.FigureWidget()
 simulation_fig.layout.title = 'Simulation'
